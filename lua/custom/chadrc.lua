@@ -9,6 +9,7 @@ M.ui = {
     separator_style = "block",
   },
   nvdash = {
+    -- Load on startup does not work, had to create an autocommand for it.
     load_on_startup = true,
     header = {
       "                                                                 ;                                 ",
