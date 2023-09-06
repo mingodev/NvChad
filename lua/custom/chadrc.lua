@@ -1,16 +1,15 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-  theme = "bearded-arc",
-  theme_toggle = { "bearded-arc", "everforest_light" },
+  theme = "ayu_dark",
+  theme_toggle = { "ayu_dark", "ayu_light" },
   transparency = false,
   statusline = {
     theme = "minimal",
     separator_style = "block",
   },
   nvdash = {
-    -- Load on startup does not work, had to create an autocommand for it.
-    load_on_startup = true,
+    load_on_startup = false,
     header = {
       "                                                                 ;                                 ",
       "                                                          :      ED.                               ",
@@ -38,7 +37,6 @@ M.ui = {
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
-  extended_integrations = { "notify" },
 }
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"

@@ -1,6 +1,5 @@
 -- Custom Vim Configs
 local opt = vim.opt
-local autocmd = vim.api.nvim_create_autocmd
 
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
@@ -14,17 +13,3 @@ opt.autoindent = true
 opt.smartindent = true
 
 vim.wo.relativenumber = true
-
--- Launch Nvdash on NVim Sartup
-autocmd("VimEnter", {
-    pattern = "*",
-    command = "Nvdash",
-})
-
--- GoLang Format on Save
-autocmd("BufWritePre", {
-  pattern = "*.go",
-  callback = function()
-    vim.lsp.buf.format { async = false }
-  end,
-})
