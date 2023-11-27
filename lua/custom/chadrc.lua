@@ -1,8 +1,8 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-  theme = "ayu_dark",
-  theme_toggle = { "ayu_dark", "ayu_light" },
+  theme = "rosepine",
+  theme_toggle = { "rosepine", "bearded-arc" },
   transparency = false,
   statusline = {
     theme = "minimal",

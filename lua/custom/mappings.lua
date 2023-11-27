@@ -11,7 +11,7 @@ M.dap = {
         ["<leader>dw"] = {
             function()
                 local widgets = require('dap.ui.widgets');
-                local sidebar = widgets.sidebar(widgets.scope)
+                local sidebar = widgets.sidebar(widgets.scopes);
                 sidebar.open();
             end,
             "Open Debugging Window"

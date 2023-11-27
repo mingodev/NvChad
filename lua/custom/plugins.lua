@@ -1,5 +1,13 @@
 local plugins = {
     {
+        "williamboman/mason.nvim",
+        opts = {
+            ensured_installed = {
+                "gopls"
+            }
+        }
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
         opts = {
             ensured_installed = {
@@ -38,12 +46,12 @@ local plugins = {
         end
     },
     {
-        "dreamsofcode-io/nvim-dap-go",
+        "leoluz/nvim-dap-go",
         ft = "go",
-        dependencies = { "mfussenegger/nvim-dap" },
+        dependencies = "mfussenegger/nvim-dap",
         config = function(_, opts)
             require("dap-go").setup(opts)
-            require("core.utils").setup(opts)
+            require("core.utils").load_mappings("dap_go")
         end,
     },
     {

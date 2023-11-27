@@ -14,12 +14,26 @@ lspconfig.gopls.setup {
   settings = {
         gopls = {
             completeUnimported = true,
-            usePlaceHolders = true,
+            usePlaceholders = true,
             analyses = {
                 unusedparams = true,
             }
         }
     }
+}
+
+-- PHP Chustom Config
+lspconfig.phpactor.setup {
+  root_dir = function(_)
+    return vim.loop.cwd()
+  end,
+  init_options = { 
+    ["language_server.diagnostics_on_update"] = false,
+    ["language_server.diagnostics_on_open"] = false,
+    ["language_server.diagnostics_on_save"] = false,
+    ["language_server_phpstan.enabled"] = false,
+    ["language_server_psalm.enabled"] = false,
+  }
 }
 
 -- Default config
